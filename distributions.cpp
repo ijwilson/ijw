@@ -3,9 +3,9 @@
 
 #include <cmath>
 
-#include "utilityfunctionals.H"
-#include "util.H"
-#include "gsl_rand.H"
+#include "utilityfunctionals.h"
+#include "util.h"
+#include "gsl_rand.h"
 
 lfactorl lfactrl_dist;
 
@@ -151,7 +151,6 @@ double ldbetaBinomial(int x, int n, double p, double s)
     -lgamma(s*p)-lgamma(s*(1.-p)) +lgamma(s) 
     +lfactrl_dist(n)-lfactrl_dist(x)-lfactrl_dist(n-x);  
 }
-
 
 /*******************************************************************/
 /*  get a sample from the Ewen's sampling formula                  */

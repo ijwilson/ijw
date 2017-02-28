@@ -54,7 +54,6 @@ std::string jointext(const char *t, const T &x,const char *t2, const S &x2
 /** Test if a file can be opened for reading                                */
 bool CanReadFile(const char *filename);
 
-
 template <typename T> void fromstring(const std::string &s, std::vector<T> &a, const char sep=',');
 template <class T> std::vector<T> readvector(std::istream &in,T dummy);
 template <class T> void printvectorb(std::ostream &o,const std::vector<T> &u,int len=5,int width=14);

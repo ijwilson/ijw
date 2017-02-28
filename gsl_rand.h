@@ -3,8 +3,8 @@
 #ifndef GSL_RAND_H__
 #define GSL_RAND_H__
 
-#include "utilityfunctionals.H"
-#include "newio.H"
+#include "utilityfunctionals.h"
+#include "newio.h"
 
 #include <cassert>
 #include <stdexcept>  // for underflow_error

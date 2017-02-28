@@ -1,4 +1,4 @@
-#include "newio.H"
+#include "newio.h"
 #include <stdexcept>
 #include <cstring>
 #include <ctime>

@@ -3,8 +3,8 @@
 #include <stdexcept>
 #include <fstream>
 #include <iostream>
-#include "newio.H"
-#include "gsl_distributions.H"
+#include "newio.h"
+#include "gsl_distributions.h"
 template <typename T> T readparfrombrackets(std::istream &in) ;
 
 /** read a pair of numbers from brackets         */

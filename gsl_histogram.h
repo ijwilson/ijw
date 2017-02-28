@@ -2,7 +2,7 @@
 #ifndef HISTOGRAM_H_
 #define HISTOGRAM_H_
 
-#include "util.H"
+#include "util.h"
 #include "gsl/gsl_histogram.h"
 #include "gsl/gsl_errno.h"
 /// a wrapper for the gsl histogram structure

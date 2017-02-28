@@ -6,8 +6,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-enum Distribution
-  {		NULLPRIOR=0,
+enum Distribution {	
+	    NULLPRIOR=0,
 		GAMMA=1,
 		LOGNORMAL=2,
 		NORMAL=3,

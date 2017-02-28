@@ -1,7 +1,7 @@
 #include <string>
 
-#include "gsl_distributions.H"
-#include "gsl_rand.H"
+#include "gsl_distributions.h"
+#include "gsl_rand.h"
 
 int main(void) 
 {

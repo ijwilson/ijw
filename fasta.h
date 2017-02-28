@@ -5,7 +5,7 @@
 #include <fstream>
 #include <sstream>
 #include <algorithm>
-#include "newio.H"
+#include "newio.h"
  
 /** A class to hold fasta type files                                 
  * This one is mainly for fasta quality files                        */

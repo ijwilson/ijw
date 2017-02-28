@@ -88,7 +88,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "xmlParser.H"
+#include "xmlParser.h"
 
 inline int mmin( const int t1, const int t2 ) { return t1 < t2 ? t1 : t2; }
 

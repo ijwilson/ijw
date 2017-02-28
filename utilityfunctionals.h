@@ -23,13 +23,6 @@ template <typename T> T rescale(  T *a, int count);
 template <typename ITOR> std::vector<std::vector<int> > tabulate(ITOR first, ITOR last, ITOR f2, ITOR l2);
 template <typename T> void keep_first_copy(std::vector<T> &a);
 
-//#ifdef WIN32
-// const double  M_PI = 3.14159265358979323846;
- //const double  M_LN2 =0.69314718055994530942;
- //double lgamma(double xx);
-//#endif
-
-
 /// A class to act as a cumulative sum functional
 template <typename T>
 class cumsum {

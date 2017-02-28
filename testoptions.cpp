@@ -1,4 +1,4 @@
-#include "options.H"
+#include "options.h"
 #include <iostream>
 #include <cstdlib> // for EXIT_FAILURE
 

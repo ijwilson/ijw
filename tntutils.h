@@ -6,7 +6,7 @@
 #include <iosfwd>
 #include <fstream>
 #include "tnt/tnt.h"
-#include "newio.H"
+#include "newio.h"
 /** A vertical slice through the array                      */
 template <typename T>
 TNT::Array2D<T> slice(const TNT::Array2D<T> &a, int from, int length) {

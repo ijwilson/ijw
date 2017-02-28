@@ -2,8 +2,8 @@
 #include <cassert>
 #include <sstream>
 #include <stdexcept>
-#include "util.H"
-#include "utilityfunctionals.H"
+#include "util.h"
+#include "utilityfunctionals.h"
 #ifdef USE_R
 #include <R.h>
 #endif
@@ -18,13 +18,11 @@ function in Numerical Recipies									       */
 lfactorial lfactrl;
 //
 //
-// 
-
-/***************************************************************/
+/****************************************************************/
 extern "C" {
-  void myerror( char *message)
+  void myerror(char *message)
     /* Error handler for my routines     
-     * to make sure that old routines that include cutil.h work*/
+     * to make sure that old routines that include cutil.h work */
   {
 #ifdef USE_R
     Rprintf("Run-time error in ijw's code...\n");
@@ -68,29 +66,27 @@ double mylog(double x)
 #endif
 
 #ifdef WIN32
-double lgamma(double xx)
-{
-	double x,y,tmp,ser;
-	static  double cof[6] = {
-		76.18009172947146,-86.50532032941677,
-		24.01409824083091,-1.231739572450155,
-		0.1208650973866179e-2,-0.5395239384953e-5	};
+double lgamma(double xx) {
+	double x, y, tmp, ser;
+	static double cof[6] = {
+		76.18009172947146, -86.50532032941677,
+		24.01409824083091, -1.231739572450155,
+		0.1208650973866179e-2, -0.5395239384953e-5};
 	int j;
 
 	y = x = xx;
 	tmp = x+5.5;
 	tmp -= (x+0.5)*log(tmp);
 	ser = 1.000000000190015;
-	for (j=0;j<=5;j++) ser += cof[j]/++y;
+	for (j=0; j<=5; j++) ser += cof[j]/++y;
 	return -tmp+log(2.5066282746310005*ser/x);
 }
 #endif
 
-
 double log_D(const double *b, int n)
  {
    double sum=0.0,temp=0.0;
-   for (int i=0;i<n;i++) {
+   for (int i=0; i<n; i++) {
      sum += b[i];
      temp += lgamma(b[i]);
    }
@@ -102,7 +98,7 @@ double log_D(const double *b, int n)
 //
 void hpsort(unsigned long n, double ra[])
 {
-	unsigned long i,ir,j,l;
+	unsigned long i, ir, j, l;
 	double rra;
 
 	if (n < 2) return;
@@ -199,7 +195,7 @@ void indexx(unsigned long n, double arr[], unsigned long indx[])
       k=(l+ir) >> 1;
       SWAP(indx[k],indx[l+1]);
       if (arr[indx[l+1]] > arr[indx[ir]]) {
-	SWAP(indx[l+1],indx[ir])
+        SWAP(indx[l+1],indx[ir])
 	  }
       if (arr[indx[l]] > arr[indx[ir]]) {
 	SWAP(indx[l],indx[ir])
@@ -235,14 +231,15 @@ void indexx(unsigned long n, double arr[], unsigned long indx[])
   }
   delete[] istack;
 }
+
 void indexi(unsigned long n, int arr[], int indx[])
 {
-  int i,indxt,ir=n,itemp,j,k,l=1;
-  int jstack=0,*istack;
+  int i, indxt, ir=n, itemp, j, k, l=1;
+  int jstack=0, *istack;
   int a;
 
   istack= new int[NSTACK+1];
-  for (unsigned long jj=1;jj<=n;jj++) indx[jj]=jj;
+  for (unsigned long jj=1; jj<=n; jj++) indx[jj]=jj;
   for (;;) {
     if (ir-l < M) {
       for (j=l+1;j<=ir;j++) {

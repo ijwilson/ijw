@@ -39,6 +39,7 @@ int runiformint(int from, int to);
 void sample2int(int wh[2],int from, int to);
 int rEwens(int *x, double theta, int n);
 double rbeta(double a,double b);
+
 #ifdef __cplusplus
 	}
 #endif

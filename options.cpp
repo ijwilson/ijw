@@ -1,14 +1,10 @@
-#include "options.H"
-#include "newio.H" // for stringwrap
-
-
+#include "options.h"
+#include "newio.h" // for stringwrap
 
 // template specialization for string
 template<> void opt<std::string>::read(const std::string &val) {
   *x = val;
 }
-
-
 
 /** strip away leading and trailing spaces (and other characters
   * from a string   */

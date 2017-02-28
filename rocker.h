@@ -3,7 +3,7 @@
 
 #include <list>
 #include <deque>
-#include "utilcpp/gsl_rand.H"
+#include "utilcpp/gsl_rand.h"
 
 /** A class to provide an abstraction to a switch (rocker switch)
  * that may be on or off and may have side effects on other objects 

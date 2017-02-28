@@ -1,5 +1,5 @@
-#include "RandomisedCases.H"
-#include "newio.H"
+#include "RandomisedCases.h"
+#include "newio.h"
 
 
 randomisedCases::randomisedCases(rng &r, int ncases, int ntotal, int replicates, bool Diploids)

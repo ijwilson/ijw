@@ -9,14 +9,12 @@
 
 #include "myenums.h"
 
-
 typedef struct inptype {
 	par_type categ;
 	char label[32],Default[32],val[32];
 } par_input; 
 
-      void tick(int i);
-
+void tick(int i);
 
 int int_scan_b(FILE *input, char *namestring,int default_val, volume vol);
 double double_scan_b(FILE *input, char *namestring,double default_val,volume vol);
@@ -74,17 +72,17 @@ double *sequence_scan(FILE *input, char *namestring,int *n, char *default_val);
 char *namescan(FILE *input, char *namestring, char *default_val);
 char *namescan_b(FILE *input, char *namestring, char *default_val,volume vol);
 double *doublevector_scan(FILE *input, char *namestring,double *default_val, int *len);
-      int *charintvector_scan(FILE *input, char *namestring,int *default_val);
-      int *charintvector_scan_b(FILE *input, char *namestring,int *default_val,volume vol);
+int *charintvector_scan(FILE *input, char *namestring,int *default_val);
+int *charintvector_scan_b(FILE *input, char *namestring,int *default_val,volume vol);
 void get_doublevals(FILE *in,double *x, int *count);
 
 char *getstringfromkeyboard(char *message, char *def_val);
 
 char *change_filename(char *filename, const char *newval);
 int count_columns(const char *filename);
-      char **readstrings(char *filename, int nstrings,int maxstringlen);
+char **readstrings(char *filename, int nstrings,int maxstringlen);
 
-      int nextnameb(FILE *in, char *filename);
+int nextnameb(FILE *in, char *filename);
 
 
 #ifdef __cplusplus

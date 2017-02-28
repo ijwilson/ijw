@@ -1,4 +1,4 @@
-#include "GenEnums.H"
+#include "GenEnums.h"
 #include <bitset>
 #include <cassert>
 

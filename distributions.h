@@ -1,7 +1,7 @@
 #ifndef DISTRIBUTINS_H__IJW
 #define DISTRIBUTINS_H__IJW
 
-#include "gsl_rand.H"
+#include "gsl_rand.h"
 double log_D(const double *b, int n);
 
 double log_dmulti_dirichlet(const int *x, double *alpha, int n);

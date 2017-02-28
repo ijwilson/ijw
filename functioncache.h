@@ -14,7 +14,6 @@ private:
 };
 
 
-
 template <typename FUNC> 
 class simplecache: public cache<FUNC> {
 public:

@@ -1,4 +1,4 @@
-#include "haplotype.H"
+#include "haplotype.h"
 #include <stdexcept>
 
 

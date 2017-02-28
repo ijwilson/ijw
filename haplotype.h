@@ -10,9 +10,9 @@
 #include <algorithm>
 #include <sstream>
 #include <map>
-#include "GenEnums.H"
-#include "mapfreq.H"
-#include "utilcpp/newio.H"
+#include "GenEnums.h"
+#include "mapfreq.h"
+#include "utilcpp/newio.h"
 
 /** a class to hold haplotype information
  * Note that this is a vector of char pointers 

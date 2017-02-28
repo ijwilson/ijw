@@ -4,9 +4,9 @@
 #include <utility>
 #include <cmath>
 #include <algorithm>
-#include "util.H"
-#include "gsl_rand.H"
-#include "utilityfunctionals.H"
+#include "util.h"
+#include "gsl_rand.h"
+#include "utilityfunctionals.h"
 
 //
 // The global random number generator

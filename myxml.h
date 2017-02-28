@@ -9,8 +9,8 @@
 #include <stack>
 #include <algorithm>
 #include "tnt/tnt.h"
-#include "util.H"
-#include "utilityfunctionals.H"
+#include "util.h"
+#include "utilityfunctionals.h"
 
 using std::ostream;
 using std::istream;

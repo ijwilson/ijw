@@ -4,7 +4,7 @@
 #include "tnt/tnt.h"
 
 
-#include "gsl_rand.H"
+#include "gsl_rand.h"
 
 /** Class to get the indices (0 offset ) for a set of 
  * randomised cases.    */

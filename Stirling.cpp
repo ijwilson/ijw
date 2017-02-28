@@ -1,4 +1,4 @@
-#include "Stirling.H"
+#include "Stirling.h"
 // Note the code here is used from polpak - original code at end
 // of file
 

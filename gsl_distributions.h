@@ -2,9 +2,9 @@
 #ifndef GSL_DISTRIBUTIONS_H__
 #define GSL_DISTRIBUTIONS_H__
 
-#include "gsl_rand.H"
-//#include "util.H"     // for warning
-#include "utilityfunctionals.H"
+#include "gsl_rand.h"
+//#include "util.h"     // for warning
+#include "utilityfunctionals.h"
 using std::vector;
 using std::ostream;
 

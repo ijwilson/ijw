@@ -24,21 +24,21 @@ using std::map;
 
 
 class nodeBase {
-public:
-  nodeBase():isSet_(false) {
-  };
-  virtual ~nodeBase() {
-  };
-  virtual void read(istream &is)=0;
-  void reset() {
-    isSet_=false;
-  }
-  bool isSet() const {
-    return isSet_;
-  }
-  virtual ostream &print(ostream &o) const =0;
-protected:
-  bool isSet_;
+  public:
+    nodeBase():isSet_(false) {
+    };
+    virtual ~nodeBase() {
+    };
+    virtual void read(istream &is)=0;
+    void reset() {
+      isSet_=false;
+    }
+    bool isSet() const {
+      return isSet_;
+    }
+    virtual ostream &print(ostream &o) const =0;
+  protected:
+    bool isSet_;
 };
 
 
@@ -106,11 +106,8 @@ private:
   std::map<std::string, nodeBase *> XMLmap;
 };
 
-
 string readtag(istream &is);
 void skiptag(istream &is,const string &tag); 
 void skiptotag(istream &is,const string &tag);
-
-
 
 #endif

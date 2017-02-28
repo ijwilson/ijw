@@ -2,8 +2,8 @@
 #ifndef GSL_ROOT_H___
 #define GSL_ROOT_H___
 
-#include "utilcpp/gsl_exception.H"
-//#include "utilcpp/gsl_vector.H"
+#include "utilcpp/gsl_exception.h"
+//#include "utilcpp/gsl_vector.h"
 #include <gsl/gsl_errno.h>
 #include <gsl/gsl_math.h>
 #include <gsl/gsl_min.h>

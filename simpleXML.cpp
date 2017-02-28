@@ -1,8 +1,9 @@
-#include "simpleXML.H"
-#include "util.H"
+#include "simpleXML.h"
+#include "util.h"
 #include <fstream>  // for ifstream
 #include <iostream>  // for ostringstream
 
+/********************************************************************************/
 string readtag(istream &is) 
 { 
   string tag;
@@ -20,6 +21,7 @@ string readtag(istream &is)
   std::getline(is,tag,'>');
   return tag;
 }
+/********************************************************************************/
 void skiptag(istream &is,const string &tag) 
 {
   char c;
@@ -42,6 +44,7 @@ void skiptag(istream &is,const string &tag)
     } else count++;
   }
 }
+/********************************************************************************/
 void skiptotag(istream &is,const string &tag) 
 {
   char c;
@@ -58,8 +61,9 @@ void skiptotag(istream &is,const string &tag)
     }
   }
 }
-/** read a set of tags from the tag that opens to the end of that tag
-*/
+/********************************************************************************/
+/** read a set of tags from the tag that opens to the end of that tag           */
+/********************************************************************************/
 bool simpleXML::read(istream &in)
 {
   /* start by reading a tag until closing ">"  */
@@ -106,7 +110,7 @@ bool simpleXML::read(istream &in)
   }    
   return true; 
 }
-
+/********************************************************************************/
 ostream &simpleXML::write(ostream &o) 
 {
    itor i=XMLmap.begin();
