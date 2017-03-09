@@ -2,7 +2,7 @@
 #define CLOSEST_H_
 
 /**  a utility class to get the indices of the closest SNPs to a position
- * without messing about with an extra vector and gsl functions           */
+  * without messing about with an extra vector and gsl functions           */
 #include "gsl_sort.h"
 #include <iostream>
 

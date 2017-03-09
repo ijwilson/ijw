@@ -29,7 +29,7 @@ void ltrim(std::string &s,char c)
 
 /** Wrap a string at word breaks of length width, and insert line breaks followed 
  the string startline at these points.  Return a string.   Note that this also uses the length of the brk to make 
- sure that evewrything would line up correctly. */
+ sure that everything would line up correctly. */
 
 std::string stringwrap(const std::string &is, const size_t width,const std::string startline) 
 {
