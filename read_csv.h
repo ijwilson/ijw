@@ -11,25 +11,24 @@ std::vector<std::string>  ReadAndTokenizeLine(std::istream &is,
 
 /// error class throw when reading csv
 class csv_exception: public std::exception {
-public:
-  csv_exception(const char *errtxt):message(errtxt) {
+ public:
+ csv_exception(const char *errtxt):message(errtxt) {
   };
-  csv_exception(const std::string &errtxt):message(errtxt) {
+ csv_exception(const std::string &errtxt):message(errtxt) {
   };
   ~csv_exception() throw() {
   }
-
   const char *what() const throw()  {
-     return message.c_str();
+    return message.c_str();
   }
-public:
+ public:
   std::string message;
 };
 
 /// read cvs (comma separated value) files
 class SimpleCSVReader {
 public:
-  SimpleCSVReader(const char *filename,bool header=true,bool quote=false);
+  SimpleCSVReader(const char *filename, bool header=true, bool quote=false);
 
   size_t ncol() const {
     return ncol_;
@@ -61,7 +60,6 @@ public:
 private:
   size_t ncol_;
   std::vector<std::vector<std::string> > xx_;
-
 };
 
 #endif
