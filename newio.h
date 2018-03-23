@@ -21,7 +21,6 @@
 #include <limits>
 #include <stdexcept>
 
-
 #ifdef USETNT
 #include <tnt/tnt.h>
 #endif
