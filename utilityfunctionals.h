@@ -87,10 +87,10 @@ std::vector<int> tabulate(ITOR first, ITOR last)
 template <typename ITOR>
 std::vector<std::vector<int> >tabulate(ITOR first, ITOR last, ITOR f2, ITOR l2)
 {
-  int cols = *(std::max_element(f2, l2));
-  int rows = *(std::max_element(first, last));
+  int cols = *(std::max_element(f2,l2));
+  int rows =*(std::max_element(first,last));
   std::vector<std::vector<int> > b(rows+1);
-  for (size_t i=0;i<b.size();i++) b[i].assign(cols+1, 0);
+  for (size_t i=0;i<b.size();i++) b[i].assign(cols+1,0);
  
 
   ITOR i=first;
@@ -161,7 +161,6 @@ class success_rate {
   double success;
   double trials;
 };
-
 
 /** A template function that removes all but the last copy of
     a value in a vector - there must be a better way as this is
