@@ -399,9 +399,8 @@ std::vector<int> intvector_scan(std::istream &in, const char *namestring,volume 
         return readintvector(in);
     } else {
       if (vol!=quiet)
-        std::cerr << namestring
-		  << " not found in parameter file, using vector of length 0\n";
-        return std::vector<int>(0);
+        std::cerr << namestring << " not found in parameter file, using vector of length 0\n";
+      return std::vector<int>(0);
     }
 }
 
@@ -410,9 +409,8 @@ std::vector<double> doublevector_scan(std::istream &in, const char *namestring) 
     if (findparametername(in,namestring)) {
         return readvector<double>(in);
     } else {
-        std::cerr << namestring
-        << " not found in parameter file, using vector of length 0\n";
-        return std::vector<double>(0);
+        std::cerr << namestring << " not found in parameter file, using vector of length 0\n";
+      return std::vector<double>(0);
     }
 }
 #endif

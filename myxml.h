@@ -182,13 +182,13 @@ TNT::Array2D<T> readBetweenTags(const char *filename, const char *tag) {
 
     if (curr==End) {
       //   REprintf("could not find tag %s in file %s\n",starttag.c_str(),*filename);
-      return;
+      return tmp;
     }
 
     // not many checks on this !
     in >> tmp;
 
-    return;
+    return tmp;
   }
 
 class simpleTAG {
