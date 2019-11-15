@@ -398,11 +398,13 @@ std::vector<int> intvector_scan(std::istream &in, const char *namestring,volume 
     if (findparametername(in,namestring)) {
         return readintvector(in);
     } else {
-      if (vol!=quiet)
+      if (vol!=quiet) {
         std::cerr << namestring
 		  << " not found in parameter file, using vector of length 0\n";
-        return std::vector<int>(0);
+      }
     }
+    return std::vector<int>(0);
+
 }
 
 /** scan an integer vector after "namestring" from input file          */
