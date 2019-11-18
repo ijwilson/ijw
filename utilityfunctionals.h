@@ -90,7 +90,8 @@ std::vector<std::vector<int> >tabulate(ITOR first, ITOR last, ITOR f2, ITOR l2)
   int cols = *(std::max_element(f2,l2));
   int rows =*(std::max_element(first,last));
   std::vector<std::vector<int> > b(rows+1);
-  for (size_t i=0;i<b.size();i++) b[i].assign(cols+1,0);
+
+  for (size_t i=0; i<b.size(); i++) b[i].assign(cols+1, 0);
  
 
   ITOR i=first;
