@@ -1,7 +1,6 @@
 #ifndef STIRLING__H__
 #define STIRLING__H__
 
-
 #include <stdexcept>
 
 class Stirling {
