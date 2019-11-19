@@ -3,7 +3,6 @@
 #define GSL_DISTRIBUTIONS_H__
 
 #include "gsl_rand.h"
-//#include "util.h"     // for warning
 #include "utilityfunctionals.h"
 using std::vector;
 using std::ostream;
