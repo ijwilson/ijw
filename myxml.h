@@ -2,7 +2,6 @@
 #ifndef MYXML_H__
 #define MYXML_H__
 
-
 #include <iostream>
 #include <fstream>
 #include <iterator>
@@ -21,7 +20,6 @@ using std::ifstream;
 using std::string;
 using std::vector;
 using std::stack;
-
 
 const char opening='<';
 const char closing='>';

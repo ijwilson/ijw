@@ -139,7 +139,6 @@ template <class T>
 
   a.calcGap();
 
-
   return in;
 }
 

@@ -5,7 +5,7 @@
 #include <map>
 #include <iostream>
 #include <iomanip>   // for setw
-#include "newio.h"
+//#include "newio.h"
 
 /// hold frequences of a factor
 template <typename T>

@@ -11,8 +11,6 @@ bool CanReadFile(const char *filename)
   return true;
 }
 
-
-
 std::string nextstring(std::istream &in);
 
 /** trim whitespace from thee beginning of a string   */
@@ -29,7 +27,7 @@ void ltrim(std::string &s,char c)
 
 /** Wrap a string at word breaks of length width, and insert line breaks followed 
  the string startline at these points.  Return a string.   Note that this also uses the length of the brk to make 
- sure that everything would line up correctly. */
+ sure that everything would line up correctly.                                                                    */
 
 std::string stringwrap(const std::string &is, const size_t width,const std::string startline) 
 {
@@ -398,10 +396,13 @@ std::vector<int> intvector_scan(std::istream &in, const char *namestring,volume 
     if (findparametername(in,namestring)) {
         return readintvector(in);
     } else {
+
       if (vol!=quiet)
         std::cerr << namestring << " not found in parameter file, using vector of length 0\n";
       return std::vector<int>(0);
     }
+    return std::vector<int>(0);
+
 }
 
 /** scan an integer vector after "namestring" from input file          */
