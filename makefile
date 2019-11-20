@@ -6,7 +6,8 @@ files = gsl_distributions.o newio.o
 CFLAGS       = -fPIC -g -pedantic -Wall -Wextra -ggdb3
 CXXFLAGS     = -fPIC -Wall -Werror -fpic
 LDFLAGS      = -shared 
-GSLLDFLAGS= $(shell gsl-config --libs)
+GSLLDFLAGS   = $(shell gsl-config --libs)
+GSLLDFLAGS   = -lgsl -lgslcblas
 
 all:	 libijwr.so test testoptions
 
@@ -15,10 +16,10 @@ libijwr.so: $(files)
 	$(CXX) $(LDFLAGS) $(files) -o libijwr.so $(GSLLDFLAGS)
 
 test:	libijwr.so gsl_tests.o
-	$(CXX) gsl_tests.o -Wl,-rpath=/home/nijw/include/ijw -o test $(GSLLDFLAGS) -lijwr -L/home/nijw/include/ijw
+	$(CXX) gsl_tests.o -Wl,-rpath=$(HOME)/include/ijw -o test $(GSLLDFLAGS) -lijwr -L$(HOME)/include/ijw
 
-testoptions: options.o testoptions.o 
-	$(CXX) -Wl,-rpath=/home/nijw/include/ijw options.o testoptions.o  -o testoptions  -lijwr  $(shell gsl-config --libs)  -L/home/nijw/include/ijw
+testoptions: options.o testoptions.o libijwr.so
+	$(CXX) -Wl,-rpath=$(HOME)/include/ijw options.o testoptions.o  -o testoptions  -lijwr  $(GSLLDFLAGS)  -L$(HOME)/include/ijw
 
 clean:
 	rm -f *.o test libijwr.so testoptions
